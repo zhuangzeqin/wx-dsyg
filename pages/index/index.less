@@ -1,0 +1,78 @@
+/**index.wxss**/
+.pyg_index{
+  
+  .swiper_index
+  {
+    margin: 5rpx 10rpx;
+    swiper
+    {
+      width: 100%;
+      // 动态计算swiper 的高度100vw*原图的高度340/原图的宽度750
+      height: calc(100vw*340/750);
+      swiper-item{
+        border-radius: 20rpx;
+      navigator{
+        image{
+          width: 100%;
+          border-radius: 20rpx;
+        }
+      }
+    }
+    }
+  }
+
+  .cate_index
+  {
+    display:flex;
+    padding: 20rpx;
+    navigator{
+      flex: 1;
+      image{
+        width: 100%;
+      }
+    }
+  }
+
+  .floor_index{
+    .floor_group{
+      .floor_title
+      {
+        //上下10rpx 左右0
+        padding: 10rpx 0;
+        image{
+          width: 100%;
+        }
+      }
+      .floor_list
+      {
+        //清除浮动
+        overflow: hidden;
+        navigator{
+          float: left;
+          width: 33.33%;
+          // 后四个超链接的意思
+          &:nth-last-child(-n+4)
+          {
+            // 原图的高度232*386
+            // 232/386= 33.33vw/ height
+            // 第一张图片的高度
+            // height: =33.33vw*386/232
+            //后四张的高度是第一张高度的一半
+            height:33.33vw*386/232/2;
+             //后四张的左边框10rpx 白色
+            border-left:10rpx solid #ffffff;
+          };
+           //2,3张底部增加 下边框10rpx 白色
+          &:nth-child(2),&:nth-child(3)
+          {
+            border-bottom:10rpx solid #ffffff;
+          }
+          image{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

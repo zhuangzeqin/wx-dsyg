@@ -1,0 +1,124 @@
+/* pages/user/user.wxss */
+page {
+  background-color: #ececec;
+  
+}
+.user_info_wrap {
+  height: 45vh;
+  overflow: hidden;
+  background-color: var(--ThemeColor);
+  position: relative;
+  .user_img_wrap {
+    position: relative; //相对定位
+    .user_bg {
+      height: 50vh;
+      //高斯模糊
+      filter: blur(10rpx);
+    }
+    .user_info {
+      position: absolute;
+      left: 50%;
+      top: 20%;
+      text-align: center;
+      transform: translateX(-50%);
+      .user_icon {
+        width: 150rpx;
+        height: 150rpx;
+        border-radius: 50%;
+      }
+      .user_name {
+        color: white;
+        // font-size: 32rpx;
+        margin-top: 40rpx;
+      }
+    }
+  }
+
+  .user_btn {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    border: 1px solid white;
+    color: white;
+    padding: 30rpx;
+    font-size: 32rpx;
+    font-weight: 600;
+    border-radius: 10rpx;
+  }
+}
+
+.user_content {
+  position: relative;
+  .user_main {
+      color: #666666;
+      padding-bottom: 90rpx;
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    top: -40rpx;
+    transform: translateX(-50%);
+    .history_wrap {
+      background-color: white;
+      display: flex;
+      navigator {
+        flex: 1;
+        text-align: center;
+        padding: 20rpx 0; //上下10 左右不给0
+        .his_num {
+          color: red;
+        }
+        .his_name {
+        }
+      }
+    }
+
+    .order_wrap {
+      background-color: white;
+      margin-top: 30rpx;
+
+      .order_title {
+        padding: 20rpx;
+        border-bottom: 1rpx solid #cccccc;
+      }
+      .order_content {
+        display: flex;
+        navigator {
+          padding: 15rpx 0;//上下15，左右0
+          flex: 1;
+          text-align: center;
+          .iconfont {
+              color: red;
+              font-size: 40rpx;
+          }
+          .order_name {
+          }
+        }
+      }
+    }
+
+    .order_address_wrap{
+        margin-top: 30rpx;
+        background-color: white;
+        padding: 20rpx;//上下20 左右为0
+    }
+    .app_info_wrap{
+        margin-top: 30rpx;
+        background-color: white;
+        .app_info_item{
+            padding: 20rpx;//上下20 左右为0
+            border-bottom: 1rpx solid #ccc;
+        }
+        .app_info_contact{
+            display: flex;
+            justify-content: space-between;//2边对齐
+        }
+    }
+
+    .recommend_wrap{
+        margin-top: 30rpx;
+        background-color: white;
+        padding: 20rpx;//上下20 左右为0
+    }
+  }
+}

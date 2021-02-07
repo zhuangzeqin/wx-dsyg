@@ -1,0 +1,2 @@
+<!--pages/auth/auth.wxml-->
+<button type="primary" plain="{{true}}" bindgetuserinfo="handleGetUserinfo" open-type="getUserInfo">授权</button>

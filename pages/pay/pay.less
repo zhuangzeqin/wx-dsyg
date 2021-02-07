@@ -1,0 +1,112 @@
+/* pages/cart/cart.wxss */
+page{
+    padding-bottom: 90rpx;
+}
+.revice_address_row {
+
+}
+.userinfo_row {
+  display: flex;
+  padding: 20rpx;
+  .userinfo {
+    flex: 5;
+  }
+  .userPhone {
+    flex: 3;
+    text-align: right;
+  }
+}
+// 购物车列表样式
+.cart_content {
+  .cart_title {
+      padding: 20rpx;
+      font-size: 36rpx;
+      color: var(--ThemeColor);
+      border-bottom: 1px solid red;
+      border-top: 1px solid  red;
+  }
+  .cart_main {
+    .cart_item {
+        display: flex;
+        padding: 10rpx;
+        border-bottom: 1rpx solid #ccc;
+   
+      .cart_img_wrap {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex:2;
+        image{
+            width: 80%;
+        }
+      }
+      .cart_info_wrap {
+        flex:4;
+        display:flex;
+        flex-direction: column;
+        //空白环绕
+        justify-content:space-around;
+        .goodsName {
+            display:-webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            color: #666666;
+        }
+        .goods_price_wrap {
+            display: flex;
+            //主轴2边放置
+            justify-content: space-between;
+          .goods_price {
+              color: red;
+              font-size: 34rpx;
+          }
+          .cart_num_tool {
+            display: flex;
+        
+            .goods_num {
+                width: 55rpx;
+                height: 55rpx;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//底部工具栏的样式
+.footer_tool{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90rpx;
+    background-color: white;
+    display: flex;
+    border-top: 1rpx solid #ffffff;
+    .total_price_wrap{
+        flex:5;
+        text-align: right;
+        padding-right: 15rpx;
+        .total_price{
+            .total_price_text{
+                color: red;
+                font-size: 34rpx;
+                font-weight: 600;
+            }
+        }
+    }
+    .order_play_wrap{
+        flex:3;
+        background-color: red;
+        color: white;
+        font-weight: 600;
+        font-size: 32rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

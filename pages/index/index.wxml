@@ -1,0 +1,71 @@
+<!--index.wxml-->
+<view class="pyg_index">
+  <!-- 搜索框 -->
+  <SerchInput></SerchInput>
+  <!-- 轮播图 -->
+  <view class="swiper_index">
+  <!-- 
+    swiper 标签存在默认的宽度和高度
+     宽度：100%
+     高度是 150 px
+    image 标签也存在默认的宽度和高度
+    320*240
+    如何设计轮播图和图片的等比例宽高
+    1 先看原图的大小；750   x   340   pixels
+    2 先让图片高度自适应；宽度100%
+    1 首先先找出原图的高度与宽度 比如  804   x   209 然后等比例给swiper 计算高度
+    swiper（w）/swiper(h)=804/209
+    swiper(h) =  swiper（w）209/804
+    height = 100vw*209/804
+   -->
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}" indicator-color="#666" indicator-active-color="#0094ff">
+      <block wx:for="{{swiperList}}" wx:key="goods_id">
+        <swiper-item>
+        <navigator url="/pages/goosdetail/goosdetail?goods_id={{item.goods_id}}">
+           <image class="swiper-image" src="{{item.image_src}}" mode="widthFix"/>
+        </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 导航栏 -->
+  <view class="cate_index">
+    <navigator
+    wx:for="{{catitems}}"
+    wx:key="name"
+    url="/pages/category/category"
+    open-type="switchTab"
+    >
+      <image mode="widthFix" src="{{item.image_src}}" />
+    </navigator>
+  </view>
+
+  <!-- 楼层view 涉及到嵌套循环  wx:for-item 别名另外区分别用默认的item-->
+  <view class="floor_index">
+    <view class="floor_group"
+    wx:for="{{floorList}}"
+    wx:for-item="item01"
+    wx:for-index="index01"
+    wx:key="floor_title"
+    >
+      <!-- 标题 -->
+      <view class="floor_title">
+        <image src="{{item01.floor_title.image_src}}" mode="widthFix"/>
+      </view>
+       <!-- 内容 -->
+      <view class="floor_list">
+        <navigator 
+        url="/pages/goods_list/goods_list?query={{item02.name}}"
+        wx:for="{{item01.product_list}}"
+        wx:for-item="item02"
+        wx:for-index="index02"
+        wx:key="name">
+        <image src="{{item02.image_src}}" mode="{{index02===0? 'widthFix':'scaleToFill'}}" />
+        </navigator>
+
+      </view>
+      </view>
+     
+  </view>
+ 
+</view>

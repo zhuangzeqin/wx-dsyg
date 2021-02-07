@@ -1,0 +1,63 @@
+page {
+  background-color: #eeeeee;
+}
+.feedback_main {
+  padding: 20rpx;
+  color: #666666;
+  background-color: #eeeeee;
+}
+.feedback_main .feedback_tips {
+  display: flex;
+  flex-wrap: wrap;
+}
+.feedback_main .feedback_tips text {
+  width: 30%;
+  padding: 10rpx;
+  background-color: white;
+  text-align: center;
+  margin: 20rpx 10rpx;
+}
+.feedback_main .feedback_content {
+  margin-top: 20rpx;
+  background-color: white;
+}
+.feedback_main .feedback_content textarea {
+  padding: 10rpx;
+}
+.feedback_main .feedback_content .feedback_tool {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 30rpx;
+}
+.feedback_main .feedback_content .feedback_tool button {
+  display: flex;
+  width: 90rpx;
+  height: 90rpx;
+  padding: 0;
+  font-size: 60rpx;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+  border-color: #bbbbbb;
+  color: #cccccc;
+}
+.feedback_main .from_btn_wrap {
+  display: flex;
+  margin-top: 20rpx;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+.feedback_main .from_btn_wrap button {
+  background-color: red;
+  color: white;
+  margin: 0;
+  width: 30%;
+  margin-top: 20rpx;
+}
+.feedback_main .from_btn_wrap .up_img_item {
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}

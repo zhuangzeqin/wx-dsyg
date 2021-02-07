@@ -1,0 +1,77 @@
+<!-- pages/user/user.wxml -->
+<view class="user_info_wrap">
+    <view class="user_img_wrap" wx:if="{{userInfo.avatarUrl}}">
+        <!-- 背景图 -->
+        <image class="user_bg" src="{{userInfo.avatarUrl}}" />
+        <!-- 图标+昵称 -->
+         <view class="user_info">
+            <image class="user_icon" src="{{userInfo.avatarUrl}}" />
+            <view class="user_name" >{{userInfo.nickName}}</view>
+        </view> 
+    </view>
+    <view class="user_btn" wx:else>
+        <navigator url="/pages/login/login">
+            登录
+        </navigator>
+    </view>
+</view>
+<view class="user_content">
+    <view class="user_main">
+        <!-- 1 历史足迹 -->
+        <view class="history_wrap">
+            <navigator >
+                <view class="his_num">0</view>
+                <view class="his_name">收藏店铺</view>
+            </navigator>
+             <navigator url="/pages/collect/collect" >
+                <view class="his_num">{{collectNum}}</view>
+                <view class="his_name">收藏商品</view>
+            </navigator>
+             <navigator >
+                <view class="his_num">0</view>
+                <view class="his_name">关注商品</view>
+            </navigator>
+             <navigator >
+                <view class="his_num">0</view>
+                <view class="his_name">我的足迹</view>
+            </navigator>
+        </view>
+        <!-- 2 我的订单 -->
+        <view class="order_wrap">
+            <view class="order_title">我的订单</view>
+             <view class="order_content">
+                 <navigator url="/pages/order/order?type=1">
+                     <view class="iconfont icon-dingdan"></view>
+                     <view class="orde_nam">全部订单</view>
+                 </navigator>
+                  <navigator  url="/pages/order/order?type=2">
+                     <view class="iconfont icon-fukuan"></view>
+                     <view class="orde_nam">待付款</view>
+                 </navigator>
+                  <navigator  url="/pages/order/order?type=3">
+                     <view class="iconfont icon-icon_dizhi"></view>
+                     <view class="orde_nam">待收货</view>
+                 </navigator>
+                  <navigator >
+                     <view class="iconfont icon-kefu"></view>
+                     <view class="orde_nam">退款/收款</view>
+                 </navigator>
+             </view>
+        </view>
+        <view class="order_address_wrap">
+            收货地址
+        </view>
+        <!-- 系统信息相关的 -->
+        <view class="app_info_wrap">
+            <view class="app_info_item app_info_contact">
+                <text >联系客服</text>
+                <text >400-400-8123</text>
+            </view>
+            <navigator class="app_info_item" url="/pages/feedback/feedback">意见反馈</navigator>
+            <view class="app_info_item">关于我们</view>
+            
+        </view>
+        <view class="recommend_wrap">推荐给其他人</view>
+    </view>
+
+</view>

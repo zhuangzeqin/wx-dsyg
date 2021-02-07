@@ -1,0 +1,26 @@
+<!-- 
+    想普通的dataset 使用我们的定义的属性名称aaa 即可
+    <view>{{aaa}}</view
+ -->
+<view class="tabs">
+<view class="tabs_title">
+<!-- <view class="tab_item">首页</view>
+<view class="tab_item">原创</view>
+<view class="tab_item">分类</view>
+<view class="tab_item">我的</view> -->
+<view class="tab_item {{item.isActive? 'active':''}}" 
+bindtap="handleItemTap"
+data-index="{{index}}"
+wx:for="{{tabs}}" 
+wx:key="id">
+{{item.name}}
+</view>
+</view>
+<view class="tabs_content">
+    <!-- 
+        slot 标签其实就是一个占位符；或是一个插槽
+        等页面有自己标签内容的时候；会替换这个占位符
+     -->
+    <slot></slot>
+</view>
+</view>

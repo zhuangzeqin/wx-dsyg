@@ -1,0 +1,62 @@
+/* pages/category/category.wxss */
+page{
+    height: 100%;
+}
+
+.cates{
+    height: 100%;
+    .cates_container{
+        // less 使用calc 计算要注意~
+        height: ~'calc(100vh - 90rpx)';
+        display:flex;
+        .cates_leftMenu{
+            flex: 2;
+            .menu_item{
+                height: 80rpx;
+                display:flex;
+                font-size: 30rpx;
+                align-items: center;
+                justify-content: center;
+                color: #666666;
+            }
+            .active{
+                color: var(--ThemeColor);
+                border-left: 5rpx solid currentColor;
+            }
+        }
+        .cates_rightContent
+        {
+            flex: 5;
+            .goods_group{
+                .goods_title{
+                    height: 80rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                    .delimiter{
+                        color: #cccccc;
+                        padding: 0 10rpx;
+                    }
+                    .title{
+
+                    }
+
+                }
+                .goods_list{
+                    display:flex;
+                    flex-wrap: wrap;
+                    navigator{
+                        width: 33.33%;
+                        text-align: center;
+                        image{
+                            width: 50%;
+                        }
+                        .goods_nam{
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
