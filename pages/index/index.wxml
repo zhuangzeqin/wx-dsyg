@@ -47,6 +47,7 @@
     wx:for-item="item01"
     wx:for-index="index01"
     wx:key="floor_title"
+    
     >
       <!-- 标题 -->
       <view class="floor_title">
